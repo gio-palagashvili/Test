@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Runtime.InteropServices;
 
 namespace test
 {
     public static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine(ApiMain.J());
             // var enumerableOfNumbers = (IEnumerable<int>) nums;
@@ -34,7 +32,7 @@ namespace test
         {
             return new PowOfRandomEnumerator(_k);
         }       
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+     IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }       
@@ -49,7 +47,7 @@ namespace test
 
         private static readonly Random Random = new Random();
         private readonly int _cRandom = Random.Next(2, 5);
-        public int Current => (int)System.Math.Pow((double)_l[_index], _cRandom);
+        public int Current => (int)Math.Pow(_l[_index], _cRandom);
         private int _index = -1;
 
         public bool MoveNext()
@@ -66,5 +64,4 @@ namespace test
         }
         object IEnumerator.Current => Current;
     }
-    
 }
