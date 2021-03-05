@@ -10,13 +10,12 @@ namespace test
     {
         static void Main(string[] args)
         {
+            ApiMain.J();
             // var enumerableOfNumbers = (IEnumerable<int>) nums;
             // using var enumeratorOfNumbers1 = nums.GetEnumerator();
-
             var nums = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             using var z = nums.GetEnumerator();
             var powerOfRandom = new PowerOfRandom(nums);
-            
             foreach (var x in powerOfRandom)
             {
                 Console.WriteLine(x);   
@@ -50,7 +49,7 @@ namespace test
         }
 
         private static readonly Random Random = new Random();
-        private readonly int _cRandom = Random.Next(2, 4);
+        private readonly int _cRandom = Random.Next(2, 5);
         public int Current => (int)System.Math.Pow((double)_l[_index], _cRandom);
         private int _index = -1;
 
