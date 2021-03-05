@@ -1,6 +1,5 @@
 ﻿namespace test
-{
-    public class ReadFile
+{ public class FileReader
     {
         
     }

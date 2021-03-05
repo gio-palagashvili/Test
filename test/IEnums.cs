@@ -18,6 +18,7 @@ namespace test
             // {
             //     Console.WriteLine(x);   
             // }
+            
         }
     }
     internal class PowerOfRandom : IEnumerable<int>
