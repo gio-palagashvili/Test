@@ -44,7 +44,6 @@ namespace test
         {
             _l = ints;
         }
-
         private static readonly Random Random = new Random();
         private readonly int _cRandom = Random.Next(2, 5);
         public int Current => (int)Math.Pow(_l[_index], _cRandom);
