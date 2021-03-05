@@ -3,7 +3,7 @@ using System.Net.Http;
 
 namespace test
 {
-    public class ApiMain
+    public static class ApiMain
     {
         public static string J()
         {
