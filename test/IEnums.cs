@@ -8,7 +8,8 @@ namespace test
     {
         static void Main()
         {
-            Console.WriteLine(ApiMain.J());
+            ApiMain.File.FileWriter();
+            // Console.WriteLine(ApiMain.J());
             // var enumerableOfNumbers = (IEnumerable<int>) nums;
             // using var enumeratorOfNumbers1 = nums.GetEnumerator();
             // var nums = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -18,7 +19,6 @@ namespace test
             // {
             //     Console.WriteLine(x);   
             // }
-            
         }
     }
     internal class PowerOfRandom : IEnumerable<int>
