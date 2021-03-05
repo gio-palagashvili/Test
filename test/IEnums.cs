@@ -24,7 +24,6 @@ namespace test
             
         }
     }
-
     internal class PowerOfRandom : IEnumerable<int>
     {
         private readonly List<int> _k;
@@ -33,7 +32,6 @@ namespace test
         {
             _k = nums;
         }
-
         public IEnumerator<int> GetEnumerator()
         {
             return new PowOfRandomEnumerator(_k);
@@ -52,7 +50,7 @@ namespace test
         }
 
         private static readonly Random Random = new Random();
-        private readonly int _cRandom = Random.Next(1, 5);
+        private readonly int _cRandom = Random.Next(2, 4);
         public int Current => (int)System.Math.Pow((double)_l[_index], _cRandom);
         private int _index = -1;
 
