@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Linq;    
 using System.Net;    
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Web;    
+using System.Web;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace test
 {
@@ -15,12 +19,14 @@ namespace test
 
         public static string J()
         {
-            using var client = new HttpClient {BaseAddress = new Uri("https://jsonplaceholder.typicode.com/todos/1")};
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = client.GetAsync("api/Values").Result;
-            var products = response.Content.ReadAsStringAsync().Result;
-            Console.WriteLine(products);
-            return "ss";
+            var client = new HttpClient()
+            {
+                BaseAddress = new Uri("https://jsonplaceholder.typicode.com/todos")
+            };
+            using var response = client.GetAsync("/todos/").Result;
+            var data = response.Content.ReadAsStringAsync().Result;            
+            return data;
         }
+
     }
 }
