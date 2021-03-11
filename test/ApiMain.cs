@@ -16,20 +16,17 @@ namespace test
             var data = response.Content.ReadAsStringAsync().Result;
             return data;
         }
-        public class File
+        public class FileClasss
         {
-            public static string FileWriter()
+            public static string FileWriter(string text,string fileName)
             {
-                var dummy = new string[] {"begone", "tt"};
-                using var sw = new StreamWriter("names.txt");
-                foreach (var s in dummy) {
-                    sw.WriteLine(s);
-                }
+                var file = $"C:/Users/Gio/Documents/c#/test/test/{fileName}.txt";
+                File.WriteAllText(file, text); 
                 return null;
             }
-            public static string FileReader()
+            public static string FileReader(string filePath)
             {
-                using var sr = new StreamReader("C:/Users/Gio/Documents/c#/test/test/dummy.txt");
+                using var sr = new StreamReader(filePath);
                 string line;
                 while ((line = sr.ReadLine()) != null) {
                     Console.WriteLine(line);
@@ -37,7 +34,6 @@ namespace test
 
                 return null;
             }
-    
         }
     }
     

@@ -8,7 +8,7 @@ namespace test
     {
         static void Main()
         {
-            ApiMain.File.FileWriter();
+            ApiMain.FileClasss.FileReader("C:/Users/Gio/Documents/c#/test/test/dummy.txt");
             // Console.WriteLine(ApiMain.J());
             // var enumerableOfNumbers = (IEnumerable<int>) nums;
             // using var enumeratorOfNumbers1 = nums.GetEnumerator();
