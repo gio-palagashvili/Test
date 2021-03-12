@@ -8,7 +8,7 @@ namespace test
     {
         static void Main()
         {
-            var dogs = new List<Dog>()
+             var dogs = new List<Dog>()
             {
                 new Dog("b"),
                 new Dog("d"),
