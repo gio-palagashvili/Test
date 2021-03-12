@@ -15,6 +15,7 @@ namespace test
     // }
     public class Dis : IDisposable
     {
+        
         private void Cleanup()
         {
             
@@ -68,4 +69,19 @@ namespace test
                         }
                         object IEnumerator.Current => Current;
                     }
+    internal class Dog : IComparable<Dog>
+    {
+        private string Name { get; set; }
+        public string Type { get; set; }
+        private int Age { get; set; }
+        public Dog(string name)
+        {
+            Name = name;
+            Age = new Random().Next(0, 100);
+        }
+        public int CompareTo(Dog other)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

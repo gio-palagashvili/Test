@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gio\\Documents\\c#\\test\\test\\test.csproj": {}
+    "C:\\Users\\Gio\\RiderProjects\\Test\\test\\test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gio\\Documents\\c#\\test\\test\\test.csproj": {
+    "C:\\Users\\Gio\\RiderProjects\\Test\\test\\test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gio\\Documents\\c#\\test\\test\\test.csproj",
+        "projectUniqueName": "C:\\Users\\Gio\\RiderProjects\\Test\\test\\test.csproj",
         "projectName": "test",
-        "projectPath": "C:\\Users\\Gio\\Documents\\c#\\test\\test\\test.csproj",
+        "projectPath": "C:\\Users\\Gio\\RiderProjects\\Test\\test\\test.csproj",
         "packagesPath": "C:\\Users\\Gio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gio\\Documents\\c#\\test\\test\\obj\\",
+        "outputPath": "C:\\Users\\Gio\\RiderProjects\\Test\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Gio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Gio\\.dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

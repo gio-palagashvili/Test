@@ -16,7 +16,7 @@ namespace test
             var data = response.Content.ReadAsStringAsync().Result;
             return data;
         }
-        public class FileClasss
+        public class FileClass
         {
             public static string FileWriter(string text,string fileName)
             {
