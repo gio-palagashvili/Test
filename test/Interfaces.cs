@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 namespace test
 {
@@ -13,16 +14,6 @@ namespace test
     // {
     // Console.WriteLine(x);   
     // }
-    public class Dis : IDisposable
-    {
-        private void Cleanup()
-        {
-            
-        }
-        public void Dispose()
-        {
-        }
-    }
     internal class PowerOfRandom : IEnumerable<int>
     {
         private List<int> K { get; set; }
@@ -72,7 +63,7 @@ namespace test
     {
         public string Name { get; set; }
         public string Type { get; set; }
-        public int Age { get; set; }
+        public int Age { get; private set; }
         private readonly Random _rand = new Random();
 
         public Dog(string name)
@@ -83,7 +74,30 @@ namespace test
 
         public int CompareTo(Dog other)
         {
-            return Age.CompareTo(other.Age);
+            // return this.Age.CompareTo(other.Age);
+            if (this.Age > other.Age)
+            {
+                return 1;
+            }
+            if(this.Age == other.Age)
+            {
+                return 0;
+            }
+            return -1;
         }
     }
+    public class Dis : IDisposable
+    {
+        private readonly StreamWriter _sw = new StreamWriter("sasasa");
+        private void Cleanup()
+        {
+            
+        }
+
+        void IDisposable.Dispose()
+        {
+            _sw.Dispose();            
+        }
+    }
+
 }
