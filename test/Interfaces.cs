@@ -15,15 +15,15 @@ namespace test
     // }
     public class Dis : IDisposable
     {
-        
         private void Cleanup()
         {
-            
         }
+
         public void Dispose()
         {
         }
     }
+
     internal class PowerOfRandom : IEnumerable<int>
     {
         private List<int> K { get; set; }
@@ -43,45 +43,55 @@ namespace test
             return GetEnumerator();
         }
     }
+
     internal class PowOfRandomEnumerator : IEnumerator<int>
-                    {
-                        private readonly List<int> _l;
-                        public PowOfRandomEnumerator(List<int> ints)
-                        {
-                            _l = ints;
-                        }
-                        private static readonly Random Random = new Random();
-                        private readonly int _cRandom = Random.Next(2, 5);
-                        public int Current => (int)Math.Pow(_l[_index], _cRandom);
-                        private int _index = -1;
-                
-                        public bool MoveNext()
-                        {
-                            _index++;
-                            return _index < _l.Count;
-                        }
-                        public void Reset()
-                        {
-                            _index = 0;
-                        }
-                        public void Dispose()
-                        {
-                        }
-                        object IEnumerator.Current => Current;
-                    }
+    {
+        private readonly List<int> _l;
+
+        public PowOfRandomEnumerator(List<int> ints)
+        {
+            _l = ints;
+        }
+
+        private static readonly Random Random = new Random();
+        private readonly int _cRandom = Random.Next(2, 5);
+        public int Current => (int) Math.Pow(_l[_index], _cRandom);
+        private int _index = -1;
+
+        public bool MoveNext()
+        {
+            _index++;
+            return _index < _l.Count;
+        }
+
+        public void Reset()
+        {
+            _index = 0;
+        }
+
+        public void Dispose()
+        {
+        }
+
+        object IEnumerator.Current => Current;
+    }
+
     internal class Dog : IComparable<Dog>
     {
-        private string Name { get; set; }
+        public string Name { get; set; }
         public string Type { get; set; }
-        private int Age { get; set; }
+        public int Age { get; set; }
+        private readonly Random _rand = new Random();
+
         public Dog(string name)
         {
             Name = name;
-            Age = new Random().Next(0, 100);
+            Age = _rand.Next(0, 100);
         }
+
         public int CompareTo(Dog other)
         {
-            throw new NotImplementedException();
+            return Age.CompareTo(other.Age);
         }
     }
 }
