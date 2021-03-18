@@ -5,6 +5,8 @@ using System.IO;
 
 namespace test
 {
+    #region x
+
     // var nums = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     // var enumerableOfNumbers = (IEnumerable<int>) nums;
     // using var z = nums.GetEnumerator();
@@ -14,6 +16,8 @@ namespace test
     // {
     // Console.WriteLine(x);   
     // }
+
+    #endregion
     internal class PowerOfRandom : IEnumerable<int>
     {
         private List<int> K { get; set; }
@@ -74,16 +78,7 @@ namespace test
 
         public int CompareTo(Dog other)
         {
-            // return this.Age.CompareTo(other.Age);
-            if (this.Age > other.Age)
-            {
-                return 1;
-            }
-            if(this.Age == other.Age)
-            {
-                return 0;
-            }
-            return -1;
+            return string.Compare(this.Name, other.Name, StringComparison.Ordinal);
         }
     }
     public class Dis : IDisposable

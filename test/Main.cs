@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace test
 {
@@ -19,7 +19,7 @@ namespace test
                 new Dog("c"),
             };
             dogs.Sort();
-            dogs.ForEach(x => Console.WriteLine(x.Age));
+            dogs.ForEach(x => Console.WriteLine(x.Name));
         }
     }
 }
