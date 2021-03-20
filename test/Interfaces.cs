@@ -5,7 +5,7 @@ using System.IO;
 
 namespace test
 {
-    #region x
+    #region cases
 
     // var nums = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     // var enumerableOfNumbers = (IEnumerable<int>) nums;
@@ -26,12 +26,10 @@ namespace test
         {
             K = nums;
         }
-
         public IEnumerator<int> GetEnumerator()
         {
             return new PowOfRandomEnumerator(K);
         }
-
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
@@ -56,7 +54,7 @@ namespace test
                         }
                         public void Reset()
                         {
-                            _index = 0;
+                            _index = -1;
                         }
                         public void Dispose()
                         {
@@ -75,7 +73,6 @@ namespace test
             Name = name;
             Age = _rand.Next(0, 100);
         }
-
         public int CompareTo(Dog other)
         {
             return string.Compare(this.Name, other.Name, StringComparison.Ordinal);
@@ -84,10 +81,6 @@ namespace test
     public class Dis : IDisposable
     {
         private readonly StreamWriter _sw = new StreamWriter("sasasa");
-        private void Cleanup()
-        {
-            
-        }
 
         void IDisposable.Dispose()
         {
