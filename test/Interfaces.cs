@@ -84,8 +84,7 @@ namespace test
 
         void IDisposable.Dispose()
         {
-            _sw.Dispose();            
+            _sw.Dispose();
         }
     }
-
 }
