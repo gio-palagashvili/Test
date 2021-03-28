@@ -8,7 +8,8 @@ namespace test
     {
         static void Main()
         {
-            
+            var X = new Database();
+            Database.Call();
         }
     }
 }
