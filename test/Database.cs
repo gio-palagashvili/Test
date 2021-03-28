@@ -13,7 +13,7 @@ namespace test
             conn.Open();
             try
             {
-                string sql = "SELECT * FROM movie";
+                string sql = $"SELECT * FROM movie";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
